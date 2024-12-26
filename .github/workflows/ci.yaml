@@ -3,7 +3,8 @@ name: build & test
 on:
   pull_request:
     branches:
-      - chimera-master-stream6-sultan
+      - dev
+      - main
 
 jobs:
   bild:
