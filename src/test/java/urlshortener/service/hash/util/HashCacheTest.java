@@ -53,7 +53,7 @@ class HashCacheTest {
         Queue<String> hashes = new ConcurrentLinkedDeque<>(HASHES);
         ReflectionTestUtils.setField(hashCache, "hashes", hashes);
 
-        assertThat(hashCache.getHash())
+        assertThat(hashCache.getHash().orElseThrow())
                 .isEqualTo(HASHES.get(0));
 
         verify(executor, never()).execute(any(Runnable.class));
