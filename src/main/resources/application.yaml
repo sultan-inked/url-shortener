@@ -46,3 +46,9 @@ app:
     url_cleaner:
       cron: '0 0 0 * * *'
       url_lifetime_days: 365
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
